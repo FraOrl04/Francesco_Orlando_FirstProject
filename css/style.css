@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: #fff;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.category-bar {
+    background: #ddd;
+    padding: 0.5rem;
+}
+
+.category-bar ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.category-bar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.content {
+    padding: 2rem;
+}
+
+.Hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.Hero img{
+    height: 400px;
+    width: 400px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+.card img{
+    height: 400px;
+    width: 400px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.logo img {
+    height:    80px;
+    width: 80px;
+    object-fit: contain;
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    min-width: 180px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #eee;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
