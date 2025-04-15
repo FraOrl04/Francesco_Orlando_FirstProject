@@ -20,6 +20,11 @@ body {
     top: 0;
 }
 
+.main-nav img {
+    width: 30px;
+    height: 30px;
+}
+
 .main-nav ul {
     display: flex;
     list-style: none;
@@ -56,10 +61,12 @@ body {
     text-align: center;
     margin-bottom: 2rem;
 }
-.Hero img{
+
+.Hero img {
     height: 400px;
     width: 400px;
 }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -72,7 +79,8 @@ body {
     border-radius: 8px;
     text-align: center;
 }
-.card img{
+
+.card img {
     height: 400px;
     width: 400px;
 }
@@ -86,28 +94,27 @@ footer {
 }
 
 .logo img {
-    height:    80px;
+    height: 80px;
     width: 80px;
     object-fit: contain;
 }
 
 .logo {
-
     display: flex;
     align-items: center;
 }
 
-.dropdown{
+.dropdown {
     position: relative;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 100%;
     left: 0;
     background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     list-style: none;
     padding: 0;
     margin: 0;
@@ -128,6 +135,7 @@ footer {
     background-color: #eee;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown-menu.show {
     display: block;
 }
+

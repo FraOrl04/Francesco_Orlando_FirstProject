@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Home Page</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-<header class = "main-header">
-    <div class="logo">
-        <img src="../Img/Logo.png" alt="" >
-    </div>
 
-    <nav class = "main-nav">
+<header class="main-header">
+    <div class="logo">
+        <img src="../Img/Logo.png" alt="Logo" />
+    </div>
+    <nav class="main-nav">
         <ul>
+            <li><img src="../Img/lente.png" alt="Cerca" /></li>
+            <li>
+                <input type="text" id="search" placeholder="Search.." />
+                <button onclick="search()">Search</button>
+            </li>
             <li><a href="#">Home</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#">Sport</a></li>
@@ -22,17 +27,17 @@
     </nav>
 </header>
 
-<nav class = "category-bar">
+<nav class="category-bar">
     <ul>
         <li><a href="#">Prima Pagina</a></li>
         <li><a href="#">Notizie Cittadine</a></li>
         <li><a href="#">Notizie dal Mondo</a></li>
         <li class="dropdown">
-            <a href="#">di più▾</a>
-            <ul class="dropdown-menu">
-                <li><a href="#">categoria 1</a> </li>
-                <li><a href="#">categoria 2</a> </li>
-                <li><a href="#">categoria 3</a> </li>
+            <a href="#" id="toggleMenu">di più ▾</a>
+            <ul class="dropdown-menu" id="menuTendina">
+                <li><a href="#">contatti </a></li>
+                <li><a href="#">Notizie del Giorno</a></li>
+                <li><a href="#">Ultima ora</a></li>
             </ul>
         </li>
     </ul>
@@ -40,32 +45,34 @@
 
 <main class="content">
     <section class="Hero">
-        <img src="../Img/Broadway.png" alt="">
-        <h2>Salavataggio a Broadway</h2>
-        <p> salvato gruppo di civili da un incendio scoppiato sulla Broadway</p>
+        <img src="../Img/Broadway.png" alt="Broadway" />
+        <h2>Broadway Rinasce: Luci, Sogni e Applausi Ritrovati</h2>
+        <p>Dopo anni di incertezze, Broadway torna a brillare...</p>
     </section>
 
     <section class="grid">
         <article class="card">
-            <img src=../Img/WarZone.png alt="">
-            <h2>Titolo Notizia</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <img src="../Img/WarZone.png" alt="War" />
+            <h2>Fiamme nel Silenzio</h2>
+            <p>Nel cuore della notte, nuovi attacchi scuotono una città...</p>
         </article>
         <article class="card">
-            <img src="../Img/NewsSimple.png" alt="">
-            <h2>Titolo Notizia</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <img src="../Img/Paesaggio.png" alt="Lago" />
+            <h2>Il Miracolo del Lago Invisibile</h2>
+            <p>Un piccolo villaggio di montagna diventa virale...</p>
         </article>
         <article class="card">
-            <img src="../Img/Pace.png" alt="">
-            <h2>Titolo Notizia</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <img src="../Img/Pace.png" alt="Pace" />
+            <h2>Prime Luci di Pace</h2>
+            <p>I leader di Ucraina e Russia annunciano un cessate il fuoco...</p>
         </article>
     </section>
 </main>
+
 <footer>
     <p>&copy; 2025 - Home Page</p>
 </footer>
 
+<script src="../JavaScript/script.js"></script>
 </body>
 </html>
