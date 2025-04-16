@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Home Page</title>
+    <title>Home Page - Notizie</title>
     <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
@@ -14,10 +14,9 @@
     </div>
     <nav class="main-nav">
         <ul>
-            <li><img src="../Img/lente.png" alt="Cerca" /></li>
             <li>
-                <input type="text" id="search" placeholder="Search.." />
-                <button onclick="search()">Search</button>
+                <input type="text" id="search" placeholder="Cerca..." />
+                <button onclick="search()"><img src="../Img/lente.png" alt="Cerca" /></button>
             </li>
             <li><a href="#">Home</a></li>
             <li><a href="#">News</a></li>
@@ -30,49 +29,80 @@
 <nav class="category-bar">
     <ul>
         <li><a href="#">Prima Pagina</a></li>
-        <li><a href="#">Notizie Cittadine</a></li>
-        <li><a href="#">Notizie dal Mondo</a></li>
+        <li><a href="#">Cronaca</a></li>
+        <li><a href="#">Dal Mondo</a></li>
+        <li><a href="#">Cultura</a></li>
         <li class="dropdown">
             <a href="#" id="toggleMenu">di più ▾</a>
             <ul class="dropdown-menu" id="menuTendina">
-                <li><a href="#">contatti </a></li>
-                <li><a href="#">Notizie del Giorno</a></li>
-                <li><a href="#">Ultima ora</a></li>
+                <li><a href="#">Contatti</a></li>
+                <li><a href="#">Ultim'ora</a></li>
+                <li><a href="#">Redazione</a></li>
             </ul>
         </li>
     </ul>
 </nav>
 
 <main class="content">
-    <section class="Hero">
-        <img src="../Img/Broadway.png" alt="Broadway" />
-        <h2>Broadway Rinasce: Luci, Sogni e Applausi Ritrovati</h2>
-        <p>Dopo anni di incertezze, Broadway torna a brillare...</p>
-    </section>
-
     <section class="grid">
+        <article class="Hero">
+            <img src="../Img/Broadway.png" alt="Broadway">
+            <h2>Broadway Rinasce: Luci, Sogni e Applausi Ritrovati</h2>
+            <p>Dopo anni di incertezze, Broadway torna a brillare...</p>
+        </article>
+
+        <!-- Più notizie -->
         <article class="card">
-            <img src="../Img/WarZone.png" alt="War" />
+            <img src="../Img/WarZone.png" alt="Guerra" />
             <h2>Fiamme nel Silenzio</h2>
-            <p>Nel cuore della notte, nuovi attacchi scuotono una città...</p>
+            <p>Nuovi attacchi scuotono la capitale durante la notte...</p>
         </article>
         <article class="card">
             <img src="../Img/Paesaggio.png" alt="Lago" />
             <h2>Il Miracolo del Lago Invisibile</h2>
-            <p>Un piccolo villaggio di montagna diventa virale...</p>
+            <p>Un villaggio alpino diventa virale sui social...</p>
         </article>
         <article class="card">
             <img src="../Img/Pace.png" alt="Pace" />
             <h2>Prime Luci di Pace</h2>
-            <p>I leader di Ucraina e Russia annunciano un cessate il fuoco...</p>
+            <p>Cessate il fuoco tra Ucraina e Russia annunciato oggi...</p>
+        </article>
+        <article class="card">
+            <img src="../Img/Politica.png" alt="Politica" />
+            <h2>Elezioni Anticipate</h2>
+            <p>Il governo annuncia elezioni anticipate per maggio...</p>
+        </article>
+        <article class="card">
+            <img src="../Img/Robotica.png" alt="Tech" />
+            <h2>Robotica in Italia</h2>
+            <p>Il futuro è adesso: innovazione e IA in crescita...</p>
         </article>
     </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h3>Ultime Notizie</h3>
+        <ul>
+            <li><a href="#">Allerta Meteo nel Centro Italia</a></li>
+            <li><a href="#">Scoperta Archeologica a Pompei</a></li>
+            <li><a href="#">Bonus Giovani 2025: come richiederlo</a></li>
+            <li><a href="#">Calcio: Derby della Capitale</a></li>
+        </ul>
+
+        <h3>Video del Giorno</h3>
+        <video controls width="100%">
+            <source src="../Video/video.mp4" type="video/mp4" />
+            Il tuo browser non supporta il video.
+        </video>
+    </aside>
 </main>
 
 <footer>
-    <p>&copy; 2025 - Home Page</p>
+    <p>&copy; 2025 - Notizie Online</p>
 </footer>
 
 <script src="../JavaScript/script.js"></script>
 </body>
 </html>
+
+

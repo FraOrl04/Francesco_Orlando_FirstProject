@@ -5,10 +5,13 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
+    background: #f5f5f5;
     line-height: 1.6;
+    color: #222;
 }
 
+/* HEADER */
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -18,17 +21,19 @@ body {
     padding: 1rem;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
-.main-nav img {
-    width: 30px;
-    height: 30px;
+.logo img {
+    height: 60px;
+    width: auto;
 }
 
 .main-nav ul {
     display: flex;
-    list-style: none;
+    align-items: center;
     gap: 1rem;
+    list-style: none;
 }
 
 .main-nav a {
@@ -36,6 +41,24 @@ body {
     text-decoration: none;
 }
 
+.main-nav input {
+    padding: 0.3rem;
+    border-radius: 4px;
+    border: none;
+}
+
+.main-nav button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.main-nav button img {
+    height: 20px;
+    width: 20px;
+}
+
+/* CATEGORY BAR */
 .category-bar {
     background: #ddd;
     padding: 0.5rem;
@@ -46,81 +69,30 @@ body {
     list-style: none;
     gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .category-bar a {
     text-decoration: none;
     color: #333;
+    font-weight: bold;
 }
 
-.content {
-    padding: 2rem;
-}
-
-.Hero {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.Hero img {
-    height: 400px;
-    width: 400px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
-}
-
-.card {
-    background: #f4f4f4;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.card img {
-    height: 400px;
-    width: 400px;
-}
-
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-.logo img {
-    height: 80px;
-    width: 80px;
-    object-fit: contain;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
+/* DROPDOWN */
 .dropdown {
     position: relative;
 }
 
 .dropdown-menu {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 100%;
     left: 0;
-    background-color: #ffffff;
+    background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     list-style: none;
-    padding: 0;
-    margin: 0;
-    z-index: 10;
     min-width: 180px;
-    transition: all 0.3s ease;
+    z-index: 100;
 }
 
 .dropdown-menu li a {
@@ -128,7 +100,6 @@ footer {
     padding: 0.75rem 1rem;
     text-decoration: none;
     color: #333;
-    white-space: nowrap;
 }
 
 .dropdown-menu li a:hover {
@@ -137,5 +108,103 @@ footer {
 
 .dropdown-menu.show {
     display: block;
+}
+
+/* LAYOUT */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.sidebar ul li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* HERO + CARD */
+.Hero,
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.Hero img,
+.card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.Hero h2,
+.card h2 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .category-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        order: -1;
+    }
 }
 
